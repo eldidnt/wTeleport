@@ -32,15 +32,15 @@ public class wTeleport implements CommandExecutor {
 
         if(args.length == 1){
             Location loc = p.getLocation();
-            config.set(args[0] + ".x", loc.getX());
-            config.set(args[0] + ".y", loc.getY());
-            config.set(args[0] + ".z", loc.getZ());
-            config.set(args[0] + ".yaw", loc.getYaw());
-            config.set(args[0] + ".pitch", loc.getPitch());
-            config.set(args[0] + ".world", loc.getWorld().getName());
-            config.set(args[0] + ".permission-required", "wteleport.use");
-            config.set(args[0] + ".command", "");
-            config.set(args[0]+ ".console-command", "");
+            config.set("Signs." + args[0] + ".x", loc.getX());
+            config.set("Signs." + args[0] + ".y", loc.getY());
+            config.set("Signs." + args[0] + ".z", loc.getZ());
+            config.set("Signs." + args[0] + ".yaw", loc.getYaw());
+            config.set("Signs." + args[0] + ".pitch", loc.getPitch());
+            config.set("Signs." + args[0] + ".world", loc.getWorld().getName());
+            config.set("Signs." + args[0] + ".permission-required", "wteleport.use");
+            config.set("Signs." + args[0] + ".command", "");
+            config.set("Signs." + args[0]+ ".console-command", "");
 
             plugin.saveConfig();
             p.sendMessage(lang.getString("set-successfully"));

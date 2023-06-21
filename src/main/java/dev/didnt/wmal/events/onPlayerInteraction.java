@@ -32,29 +32,34 @@ public class onPlayerInteraction implements Listener {
                 if (p.hasPermission(config.getString(n + ".permission-required"))) {
                     try {
                         //tp
-                        double x = Double.parseDouble(config.getString(n + ".x"));
-                        double y = Double.parseDouble(config.getString(n + ".y"));
-                        double z = Double.parseDouble(config.getString(n + ".z"));
-                        float yaw = Float.parseFloat(config.getString(n + ".yaw"));
-                        float pitch = Float.parseFloat(config.getString(n + ".pitch"));
-                        World world = Bukkit.getWorld(config.getString(n + ".world"));
+                        double x = Double.parseDouble(config.getString("Signs." + n + ".x"));
+                        double y = Double.parseDouble(config.getString("Signs." + n + ".y"));
+                        double z = Double.parseDouble(config.getString("Signs." + n + ".z"));
+                        float yaw = Float.parseFloat(config.getString("Signs." + n + ".yaw"));
+                        float pitch = Float.parseFloat(config.getString("Signs." + n + ".pitch"));
+                        World world = Bukkit.getWorld(config.getString("Signs." + n + ".world"));
                         Location location = new Location(world, x, y, z, yaw, pitch);
 
                         p.teleport(location);
                         p.sendMessage(lang.getString("successful"));
                         //command
-                        if(config.getString(n + ".console-command") != ""){
-                            p.performCommand(config.getString(n + ".command")
+                        if(config.getString("Signs." + n + ".command") != "" || config.getString("Signs." + n + ".command") != null
+                           || !config.getString("Signs." + n + ".command").isEmpty()){
+                            p.performCommand(config.getString("Signs." + n + ".command")
                               .replace("%player%", p.getName()));
                         }
                         //console command
-                        if(config.getString(n + ".console-command") != ""){
+                        if(config.getString("Signs." + n + ".console-command") != "" ||
+                           config.getString("Signs." + n + ".console-command") != null ||
+                           !config.getString("Signs." + n + ".console-command").isEmpty()){
                             ConsoleCommandSender c = Bukkit.getServer().getConsoleSender();
-                            Bukkit.dispatchCommand(c,config.getString(n + ".console-command")
+                            Bukkit.dispatchCommand(c,config.getString("Signs." + n + ".console-command")
                               .replace("%player%", p.getName()));
                         }
                     } catch (Exception er) {
                         p.sendMessage(lang.getString("error"));
+                        Bukkit.getServer().getConsoleSender().sendMessage(er.getMessage());
+                        Bukkit.getServer().getConsoleSender().sendMessage(er.getLocalizedMessage());
                     }
                 } else {
                     p.sendMessage(lang.getString("no-permission"));
