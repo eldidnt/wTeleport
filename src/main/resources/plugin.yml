@@ -1,6 +1,6 @@
-name: DidiCore_1_19_4
+name: Carteles wMal
 version: 1.0
-main: dev.didnt.didicore.Main
+main: dev.didnt.wmal.Main
 api-version: 1.17
 authors: [ Didnt ]
 description: Simple Core

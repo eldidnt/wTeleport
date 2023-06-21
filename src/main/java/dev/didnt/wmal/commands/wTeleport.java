@@ -26,12 +26,12 @@ public class wTeleport implements CommandExecutor {
             s.sendMessage(lang.getString("no-console"));
             return false;
         } else if (!s.hasPermission("wteleport.admin")) {
-            s.sendMessage(lang.getString("no-permission"));
+            p.sendMessage(lang.getString("no-permission"));
             return false;
         }
 
         if(args.length == 1){
-            Location loc = ((Player) s).getLocation();
+            Location loc = p.getLocation();
             config.set(args[0] + ".x", loc.getX());
             config.set(args[0] + ".y", loc.getY());
             config.set(args[0] + ".z", loc.getZ());
@@ -43,9 +43,10 @@ public class wTeleport implements CommandExecutor {
             config.set(args[0]+ ".console-command", "");
 
             plugin.saveConfig();
+            
             return true;
         }
-        lang.getStringList("usage").forEach(s::sendMessage);
+        lang.getStringList("usage").forEach(p::sendMessage);
         return false;
     }
 }
