@@ -17,14 +17,15 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 public class onPlayerInteraction implements Listener {
     Main plugin = Main.getInstance();
-    ConfigUtil config = new ConfigUtil(plugin, "config.yml");
+    ConfigUtil config;
     ConfigUtil lang = new ConfigUtil(plugin, "lang.yml");
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent e) {
         Player p = e.getPlayer();
         Block b = e.getClickedBlock();
-
+        config = new ConfigUtil(plugin, "config.yml");
         if (e.getAction() == Action.RIGHT_CLICK_BLOCK && b != null && b.getType() == Material.WALL_SIGN) {
+
             Sign s = (Sign) b.getState();
             String[] l = s.getLines();
             if (l[0].equalsIgnoreCase("[Teleport]")) {

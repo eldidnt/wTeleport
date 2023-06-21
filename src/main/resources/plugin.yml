@@ -8,4 +8,3 @@ description: Simple Core
 commands:
   wteleport:
     description: a
-    usage: /wteleport

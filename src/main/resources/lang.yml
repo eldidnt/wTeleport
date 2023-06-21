@@ -1,9 +1,25 @@
 no-console: "This commans is only for players."
 no-permission: "&cYou don't have permission to use this command"
+no-exists: "This teleport doesn't exist."
 error: "&cAn exception has ocurred."
 set-successfully: "&aTeleport location set successfully"
+delete: "&cTeleport &e%name% has been deleted."
+delete-all: "&cAll teleports has been deleted."
+available: "&6Available Teleports:"
+no-available: "&cNo teleports available"
+
 successful: "&aYou have successfully teleported"
 usage:
+  - "&7Available commands:"
+  - "  &e/wteleport set (name)"
+  - "  &e/wteleport delete (name)"
+  - "  &e/wteleport deleteall"
+  - "  &e/wteleport list"
+set-usage:
   - "&7Correct usage:"
-  - "&e/wteleport (name)"
+  - "&e/wteleport set (name)"
   - "&7This command obtain your position and save this to use in signs"
+delete-usage:
+  - "&7Correct usage:"
+  - "&e/wteleport delete (name)"
+  - "&7This command delete all the data of a teleport point."
