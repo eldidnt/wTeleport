@@ -1,6 +1,7 @@
 no-console: "This commans is only for players."
 no-permission: "&cYou don't have permission to use this command"
 error: "&cAn exception has ocurred."
+set-successfully: "&aTeleport location set successfully"
 successful: "&aYou have successfully teleported"
 usage:
   - "&7Correct usage:"

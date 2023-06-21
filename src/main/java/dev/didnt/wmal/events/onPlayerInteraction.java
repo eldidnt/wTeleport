@@ -24,11 +24,9 @@ public class onPlayerInteraction implements Listener {
         Player p = e.getPlayer();
         Block b = e.getClickedBlock();
 
-        p.sendMessage("paso 1");
         if (e.getAction() == Action.RIGHT_CLICK_BLOCK && b != null && b.getType() == Material.WALL_SIGN) {
             Sign s = (Sign) b.getState();
             String[] l = s.getLines();
-
             if (l[0].equalsIgnoreCase("[Teleport]")) {
                 String n = l[1];
                 if (p.hasPermission(config.getString(n + ".permission-required"))) {

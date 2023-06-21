@@ -43,7 +43,7 @@ public class wTeleport implements CommandExecutor {
             config.set(args[0]+ ".console-command", "");
 
             plugin.saveConfig();
-            
+            p.sendMessage(lang.getString("set-successfully"));
             return true;
         }
         lang.getStringList("usage").forEach(p::sendMessage);
