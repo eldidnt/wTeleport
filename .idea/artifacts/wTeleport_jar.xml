@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="wTeleport:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/wTeleport_jar</output-path>
+    <root id="archive" name="wTeleport.jar">
+      <element id="module-output" name="wTeleport" />
+    </root>
+  </artifact>
+</component>
