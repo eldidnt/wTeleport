@@ -1,0 +1,11 @@
+name: DidiCore_1_19_4
+version: 1.0
+main: dev.didnt.didicore.Main
+api-version: 1.17
+authors: [ Didnt ]
+description: Simple Core
+
+commands:
+  wteleport:
+    description: a
+    usage: /wteleport
