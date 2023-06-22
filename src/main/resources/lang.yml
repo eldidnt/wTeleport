@@ -10,17 +10,16 @@ no-available: "&cNo hay puntos de teletransporte disponibles."
 
 successful: "&aTe has teletransportado exitosamente."
 usage:
-
-  "&7Comandos disponibles:"
-  " &e/wteleport set (nombre)"
-  " &e/wteleport delete (nombre)"
-  " &e/wteleport deleteall"
-  " &e/wteleport list"
+  - "&7Comandos disponibles:"
+  - " &e/wteleport set (nombre)"
+  - " &e/wteleport delete (nombre)"
+  - " &e/wteleport deleteall"
+  - " &e/wteleport list"
 set-usage:
-  "&7Uso correcto:"
-  "&e/wteleport set (nombre)"
-  "&7Este comando obtiene tu posición actual y la guarda para usarla en letreros."
+  - "&7Uso correcto:"
+  - "&e/wteleport set (nombre)"
+  - "&7Este comando obtiene tu posición actual y la guarda para usarla en letreros."
 delete-usage:
-  "&7Uso correcto:"
-  "&e/wteleport delete (nombre)"
-  "&7Este comando elimina todos los datos de un punto de teletransporte."
+  - "&7Uso correcto:"
+  - "&e/wteleport delete (nombre)"
+  - "&7Este comando elimina todos los datos de un punto de teletransporte."

@@ -34,7 +34,7 @@ public class wTeleport implements CommandExecutor {
             return false;
         }
 
-        if(args.length > 1){
+        if(args.length >= 1){
             if(args[0].equalsIgnoreCase("set")){
                 if(args.length == 2){
                     Location loc = p.getLocation();
